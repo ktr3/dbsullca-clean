@@ -1,0 +1,48 @@
+/* === Ocultar modales popup de anuncios === */
+.gbm-modal-backdrop,
+.gbm-modal-container,
+.gbm-modal-overlay {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* === Ocultar banner sticky inferior === */
+.prsbn-sticky-wrap,
+.prsbn-instance {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* === Ocultar overlays de click en el video === */
+#rf-click-overlay {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* === Ocultar reproductor flotante de ads === */
+#rf-container {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* === Quitar blur/overlay que bloquea contenido === */
+body.gbm-modal-open {
+  overflow: auto !important;
+  filter: none !important;
+}
+
+/* === Ocultar cualquier iframe de challenge/ads === */
+iframe[src*="challenge-platform"],
+iframe[src*="redireccionar"] {
+  display: none !important;
+}
+
+/* === Ocultar links de redirección publicitaria === */
+a.sullca-external-link[href*="redireccionar"] {
+  display: none !important;
+}

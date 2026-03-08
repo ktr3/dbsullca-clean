@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "DBSullca Clean",
+  "version": "1.0.0",
+  "description": "Experiencia limpia en DBSullca.com",
+  "permissions": ["declarativeNetRequest"],
+  "host_permissions": ["*://*.dbsullca.com/*", "*://*.sullca.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.dbsullca.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
